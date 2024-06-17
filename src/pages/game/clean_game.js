@@ -13,7 +13,6 @@ function clean_game_init() {
       if (!should_run) {
         return false;
       }
-      console.log(`Redirecting: ${requestDetails.url}`);
       return {
         cancel: true,
       };
