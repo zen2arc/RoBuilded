@@ -17,7 +17,7 @@ Build using the Build Script:
 ``$ npm run build``
 
 You can then zip the contents of the build folder and rename it to .xpi for a Mozilla Firefox extension.
-To install extensions not signed by Mozilla to Firefox, install Firefox Developer Edition. You can then goto about:addons and click "Install Add-on from file"
+To install extensions not signed by Mozilla to Firefox, install Firefox Developer Edition. Then, goto about:config and change ``xpinstall.signatures.required`` to ``false``. Then, goto about:addons and click "Install Add-on from file"
 
 ## License
 This project is licensed under the MIT License. View LICENSE for the full text.
