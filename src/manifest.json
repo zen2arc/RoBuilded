@@ -1,0 +1,51 @@
+{
+  "manifest_version": 2,
+  "name": "Rofreshed",
+  "version": "1.0",
+
+  "description": "Rofreshed",
+
+  "icons": {
+    "48": "icons/icon_48.png",
+    "96": "icons/icon_96.png"
+  },
+
+  "permissions": [
+    "storage",
+    "scripting",
+    "webRequest",
+    "webRequestBlocking",
+    "*://*.roblox.com/*"
+  ],
+
+  "web_accessible_resources": [
+    "web/pages/*/*.js",
+    "web/notsupported.html",
+    "web/themes/*/index.css"
+  ],
+  "options_ui": {
+    "page": "/options/index.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rofreshed@painfulcolour.github.io",
+      "strict_min_version": "42.0"
+    }
+  },
+  "browser_action": {
+    "default_icon": "icons/icon_48.png",
+    "default_title": "Rofreshed",
+    "default_popup": "popup/popup.html"
+  },
+  "background": {
+    "scripts": ["pages/game/clean_game.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": ["*://web.roblox.com/*", "*://www.roblox.com/*"],
+      "js": ["scripts/content_main.js"]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "rofreshed",
+  "version": "1.0.0",
+  "description": "rofreshed",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "start": "rollup -c -w"
+  },
+  "author": "PainfulColour",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "rollup": "^4.18.0",
+    "rollup-plugin-chrome-extension": "^3.6.12"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "xhook": "^1.6.2"
+  }
+}

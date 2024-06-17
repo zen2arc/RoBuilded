@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --border-radius: 25px;
+  --lesser-border-radius: 20px;
+
+  --lessest-border-radius: 10px;
+}
+
+.dark-theme {
+  --theme-content: #232527;
+  --theme-primary: #393b3d;
+  --theme-secondary: #1c1c1d;
+  --theme-transparent: #13141475;
+  --theme-extreme: #000;
+
+  --theme-button-secondary: #232324;
+
+  --colour-danger: #ae1000;
+
+  --theme-inverted: #fff;
+}
+
+.light-theme {
+}
+
+.content {
+  background-color: var(--theme-content);
+  color: var(--theme-inverted);
+}
+
+.spinner {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  display: flex !important;
+  justify-content: center;
+  background: none !important;
+}
+
+.spinner::after {
+  content: "";
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  position: relative;
+  border-color: rgba(255, 255, 255, 0.65) rgba(255, 255, 255, 0.75)
+    rgba(255, 255, 255, 0.85) rgba(255, 255, 255, 1) !important;
+  border: 10px solid;
+  box-sizing: border-box;
+  animation: animloader 1s linear infinite;
+}
+
+@keyframes animloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+button {
+  transition: 0.5s;
+}
+
+.section-content,
+.carousel-item,
+.stack-row,
+.btn-secondary-lg,
+.rbx-tab,
+.game-stat-container,
+.favorite-follow-vote-share,
+.game-title-container,
+.game-main-content,
+.rbx-tab .rbx-tab-heading,
+#horizontal-tabs,
+.modal-dialog,
+.modal-content,
+.btn-control-md,
+.dropdown-menu,
+.dropdown-menu *,
+.tab-content,
+.menu-vertical,
+#chat-main,
+.chat-friend,
+.game-badges-list,
+.badge-row {
+  border-radius: var(--border-radius) !important;
+}
+
+.icon-close {
+  background-color: var(--theme-secondary);
+  border-radius: var(--lessest-border-radius);
+}
+
+.modal-header {
+  padding-bottom: 0px !important;
+  border: none !important;
+}
+
+.modal-content,
+.dropdown-menu {
+  padding: 10px;
+}
+
+/* Heaher & Navigation */
+
+#navigation .rbx-divider {
+  display: none;
+}
+
+#header {
+  /* padding: 15px; */
+  box-sizing: content-box;
+}
+
+/* Fonts */
+
+.builder-font,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+span {
+  font-family: "Poppins", sans-serif !important;
+}
+.text,
+#navigation * {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 500;
+}
+
+.builder-font h1 {
+  font-weight: 600;
+}
+.builder-font h2 {
+  font-weight: 500;
+}
+
+.alert {
+  border-radius: 0px 0px var(--border-radius) var(--border-radius);
+  background-color: var(--colour-danger) !important;
+}
+
+/* Home */
+
+.game-card-container:hover {
+  padding: 5px;
+}
+
+.game-card-container {
+  transition: 0.3s;
+}
+
+/* Chat Window */
+
+#chat-header {
+  border-radius: var(--border-radius) var(--border-radius) 0px 0px;
+  padding: 5px;
+  box-sizing: content-box;
+}
+
+.collapsed #chat-main {
+  box-shadow: none !important;
+  background: transparent !important;
+  margin-bottom: 0px !important;
+}
+
+.collapsed #chat-header {
+  box-shadow: 0px 0px 10px hsla(0, 0%, 0%, 0.74) !important;
+  box-shadow: none !important;
+}
+
+#chat-main {
+  margin: 15px;
+  box-shadow: 0px 0px 10px hsla(0, 0%, 0%, 0.74) !important;
+}
+
+.chat-search,
+.chat-search-input {
+  border-radius: 0px !important;
+}
+
+#chat-friend-list {
+  max-height: calc(294px - 11px) !important;
+}
+
+/* Settings Page */
+
+.menu-vertical {
+  padding: 10px !important;
+}
+
+.menu-vertical * {
+  border-radius: 5px;
+}
+
+/* Game Page */
+
+.btn-common-play-game-lg {
+  background-color: #26a269 !important;
+}
+
+.game-main-content,
+.tab-content,
+.game-badges-list {
+  padding: 12px !important;
+  margin-top: 12px;
+}
+
+.game-badges-list {
+  padding: 12px !important;
+}
+
+.nav-tabs,
+.game-main-content,
+.game-badges-list,
+.tab-content, .section-content-off {
+  background-color: var(--theme-primary) !important;
+}
+
+.voting-panel .loading {
+  display: none !important;
+}
+
+.age-rating-details,
+#game-details-play-button-container button {
+  border-radius: var(--lesser-border-radius);
+}
+
+.favorite-follow-vote-share,
+.game-title-container {
+  padding: 15px !important;
+  margin-top: 15px;
+}
+
+.game-title-container {
+  margin: 0px !important;
+}
+
+.game-name {
+  padding: 0px;
+}
+
+.favorite-follow-vote-share {
+  display: flex;
+  justify-content: center;
+}
+
+.game-stat-container,
+.favorite-follow-vote-share,
+.age-rating-details,
+.game-title-container,
+.badge-row {
+  background-color: var(--theme-transparent) !important;
+  border: none;
+}
+
+.vote-mask {
+  display: none !important;
+}
+
+.vote-percentage {
+  border-radius: 5px;
+}
+
+.avatar-card-image img,
+.avatar-container img {
+  background-color: var(--theme-transparent) !important;
+  border: transparent !important;
+}
