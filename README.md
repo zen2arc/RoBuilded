@@ -7,6 +7,7 @@ Make sure you have [Node.js](https://nodejs.org) and npm installed. To install a
 ``$ npm install``
 
 after you have installed all the packages:
+
 ``$ npm run build``
 
 You can then zip the contents of the output folder (should be build/) and rename it to .xpi for a Mozilla Firefox extension.
