@@ -11,3 +11,6 @@ after you have installed all the packages:
 ``$ npm run build``
 
 You can then zip the contents of the output folder (should be build/) and rename it to .xpi for a Mozilla Firefox extension.
+
+## License
+This project is licensed under the MIT License. View LICENSE for the full text.
