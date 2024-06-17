@@ -1,7 +1,7 @@
 {
   "name": "rofreshed",
   "version": "1.0.0",
-  "description": "rofreshed",
+  "description": "Refreshing the Roblox Website",
   "main": "index.js",
   "scripts": {
     "build": "rollup -c",
