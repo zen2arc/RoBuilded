@@ -23,6 +23,7 @@
 }
 
 .light-theme {
+  /* TODO: add light theme colours */
 }
 
 .content {
@@ -69,6 +70,7 @@ button {
 .carousel-item,
 .stack-row,
 .btn-secondary-lg,
+.btn-secondary-md,
 .rbx-tab,
 .game-stat-container,
 .favorite-follow-vote-share,
@@ -85,9 +87,18 @@ button {
 .menu-vertical,
 #chat-main,
 .chat-friend,
+.dialog-container,
+.dialog-main,
 .game-badges-list,
-.badge-row {
+.badge-row,
+.group-image,
+.group-image *,
+.social-link-icon {
   border-radius: var(--border-radius) !important;
+}
+
+.dropdown-menu * {
+  transition: background-color 0.2s;
 }
 
 .icon-close {
@@ -105,7 +116,7 @@ button {
   padding: 10px;
 }
 
-/* Heaher & Navigation */
+/* Header & Navigation */
 
 #navigation .rbx-divider {
   display: none;
@@ -114,6 +125,24 @@ button {
 #header {
   /* padding: 15px; */
   box-sizing: content-box;
+}
+
+.new-dropdown-menu li {
+  border: none !important;
+}
+
+/* Buttons */
+
+.btn-secondary-md {
+  /* This kind of button has a outline and a transparent background. */
+  /* Use the secondary theme colour and no border. */
+  border: none !important;
+  background-color: var(--theme-secondary) !important;
+}
+
+.btn-common-play-game-lg {
+  /* The play button */
+  background-color: #26a269 !important;
 }
 
 /* Fonts */
@@ -132,7 +161,8 @@ h4,
 h5,
 h6,
 button,
-span {
+span,
+textarea {
   font-family: "Poppins", sans-serif !important;
 }
 .text,
@@ -165,7 +195,8 @@ span {
 
 /* Chat Window */
 
-#chat-header {
+#chat-header,
+.dialog-header {
   border-radius: var(--border-radius) var(--border-radius) 0px 0px;
   padding: 5px;
   box-sizing: content-box;
@@ -187,9 +218,34 @@ span {
   box-shadow: 0px 0px 10px hsla(0, 0%, 0%, 0.74) !important;
 }
 
+.dialog-container {
+  margin: 15px;
+}
+
+.dialog-container {
+  box-shadow: 0px 0px 10px hsla(0, 0%, 0%, 0.74) !important;
+  background-color: transparent !important;
+}
+
 .chat-search,
 .chat-search-input {
   border-radius: 0px !important;
+}
+
+.dialog-input-container .dialog-input {
+  background: transparent !important;
+}
+
+.dialog-container .dialog-input-container {
+  background-color: var(--theme-secondary)!important;
+}
+
+.dialog-body {
+  background-color: var(--theme-primary)!important;;
+}
+
+.dialog-container .dialog-input-container, .dialog-input-container .dialog-input {
+  border-radius: 0px 0px var(--border-radius) var(--border-radius) !important;
 }
 
 #chat-friend-list {
@@ -208,10 +264,6 @@ span {
 
 /* Game Page */
 
-.btn-common-play-game-lg {
-  background-color: #26a269 !important;
-}
-
 .game-main-content,
 .tab-content,
 .game-badges-list {
@@ -226,7 +278,10 @@ span {
 .nav-tabs,
 .game-main-content,
 .game-badges-list,
-.tab-content, .section-content-off {
+.tab-content,
+.section-content-off,
+.section-content,
+.menu-vertical {
   background-color: var(--theme-primary) !important;
 }
 
@@ -275,8 +330,28 @@ span {
   border-radius: 5px;
 }
 
+.avatar-container .avatar-card-image,
+.avatar-container img,
 .avatar-card-image img,
-.avatar-container img {
-  background-color: var(--theme-transparent) !important;
-  border: transparent !important;
+.avatar-container img,
+.avatar .avatar-card-image {
+  background-color: transparent !important;
+}
+
+.avatar .avatar-card-image {
+  background-color: transparent !important;
+}
+
+/* Group Page */
+.group-cards .rbx-divider {
+  display: none;
+}
+
+.groups-list .group-search-input .input-field {
+  display: inline;
+  /* Disabling float should be fine */
+  float: none !important;
+  border: none !important;
+  border-radius: var(--border-radius);
+  background-color: var(--theme-secondary);
 }
