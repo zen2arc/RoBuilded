@@ -1,7 +1,7 @@
 # Rofreshed
 ## What is this?
 It is a Mozilla Firefox extension to stylize the Roblox Website. This project is in VERY EARLY beta. Report any bugs you see.
-## Build & Installation Instructions
+## Build Instructions
 Make sure you have [Node.js](https://nodejs.org) and [npm](https://www.npmjs.com/) installed.
 
 Clone the repository:
@@ -12,12 +12,9 @@ Install all the required npm packages:
 
 ``$ npm install``
 
-Build using the Build Script:
+Build using the build script:
 
 ``$ npm run build``
-
-You can then zip the contents of the build folder and rename it to .xpi for a Mozilla Firefox extension.
-To install extensions not signed by Mozilla to Firefox, install Firefox Developer Edition. Then, goto about:config and change ``xpinstall.signatures.required`` to ``false``. Then, goto about:addons and click "Install Add-on from file"
 
 ## License
 This project is licensed under the MIT License. View LICENSE for the full text.
