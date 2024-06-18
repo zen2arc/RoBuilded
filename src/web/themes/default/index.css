@@ -256,6 +256,13 @@ button {
   padding-left: 15px; /* Add padding instead of margin for the content class, as it already has a margin. */
 }
 
+@media (min-width: 1688px) {
+  .no-gutter-ads.logged-in .content {
+    /* This should work */
+    margin-left: calc(175px + 15px);
+  }
+}
+
 /* Fonts */
 
 .builder-font,
