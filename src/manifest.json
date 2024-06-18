@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Rofreshed",
-  "version": "1.0",
+  "version": "1.2.0",
 
   "description": "Refreshing the Roblox Website",
 
@@ -46,6 +46,11 @@
       "run_at": "document_start",
       "matches": ["*://web.roblox.com/*", "*://www.roblox.com/*"],
       "js": ["scripts/content_main.js"]
+    },
+    {
+      "run_at": "document_end",
+      "matches": ["*://web.roblox.com/*", "*://www.roblox.com/*"],
+      "js": ["scripts/content_loaded.js"]
     }
   ]
 }
