@@ -1,11 +1,5 @@
 import { storage_add, storage_get } from "../modules/storage";
 
-const theme_selection = document.getElementById("theme_selection");
-const home_clutter_selection = document.getElementById("clean_home_checkbox");
-const game_recommended_selection = document.getElementById(
-  "clean_game_checkbox"
-);
-const ublock_selection = document.getElementById("ublock_checkbox");
 const sidebar_selection_open_button = document.getElementById("clean_sidebar_button");
 const sidebar_selection_close_button = document.getElementById("close_sidebar_buttons");
 
@@ -45,11 +39,5 @@ sidebar_selection_close_button.addEventListener("click", function() {
   document.getElementById("sidebar_buttons").style.display = 'none';
   document.getElementById("main_panel").style.display = 'block';
 }); 
-
-
-ublock_selection.addEventListener("change", function () {
-  ublock_selection.checked = false;
-  window.open("https://github.com/gorhill/uBlock");
-});
 
 update_settings();
