@@ -1,6 +1,8 @@
 # Rofreshed
 Rofreshed is a Mozilla Firefox extension to stylize the Roblox Website. This project is in VERY EARLY beta. Report any bugs you see & if you have any suggestions for tweaks, let us know.
 ## Included Tweaks
+### General
+Customize Sidebar buttons
 ### Home Menu
 Remove clutter, such as "Today's Picks" from Home Page.
 ### Game Page
