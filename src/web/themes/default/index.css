@@ -19,15 +19,35 @@
 
   --colour-danger: #ae1000;
 
+  --theme-loading-spinner: rgba(255, 255, 255, 0.65) rgba(255, 255, 255, 0.75)
+  rgba(255, 255, 255, 0.85) rgba(255, 255, 255, 1);
+
   --theme-inverted: #fff;
 }
 
 .light-theme {
-  /* TODO: add light theme colours */
+  /* Light theme is not supported as well as dark theme. */
+  --theme-content: #f2f4f5;
+  --theme-primary: #dfdfdf;
+  --theme-secondary: #7e7e7e;
+  --theme-transparent: #b4b4b475;
+  --theme-extreme: #ffffff;
+
+  --theme-button-secondary: #6e6e6e;
+
+  --colour-danger: #ae1000;
+
+  --theme-loading-spinner: rgba(0, 0, 0, 0.65) rgba(0, 0, 0, 0.75)
+  rgba(0, 0, 0, 0.85) rgb(0, 0, 0);
+
+  --theme-inverted: #000000;
+}
+
+body, .content {
+  background-color: var(--theme-content);
 }
 
 .content {
-  background-color: var(--theme-content);
   color: var(--theme-inverted);
 }
 
@@ -46,19 +66,21 @@
   width: 48px;
   border-radius: 50%;
   position: relative;
-  border-color: rgba(255, 255, 255, 0.65) rgba(255, 255, 255, 0.75)
-    rgba(255, 255, 255, 0.85) rgba(255, 255, 255, 1) !important;
+  border-color: var(--theme-loading-spinner) !important;
   border: 10px solid;
   box-sizing: border-box;
-  animation: animloader 1s linear infinite;
+  animation: spin 1s linear infinite;
 }
 
-@keyframes animloader {
-  0% {
-    transform: rotate(0deg);
-  }
+@keyframes spin {
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes spin_restore {
+  100% {
+    transform: rotate(0deg);
   }
 }
 
@@ -71,6 +93,7 @@ button {
 .stack-row,
 .btn-secondary-lg,
 .btn-secondary-md,
+.btn-cta-md,
 .rbx-tab,
 .game-stat-container,
 .favorite-follow-vote-share,
@@ -93,8 +116,17 @@ button {
 .badge-row,
 .group-image,
 .group-image *,
-.social-link-icon {
+.social-link-icon,
+.popover {
   border-radius: var(--border-radius) !important;
+}
+
+.popover * {
+  border: none !important;
+}
+
+.popover img {
+  border-radius: var(--lessest-border-radius);
 }
 
 .dropdown-menu * {
@@ -116,19 +148,57 @@ button {
   padding: 10px;
 }
 
+
 /* Header & Navigation */
 
 #navigation .rbx-divider {
   display: none;
 }
 
+#navigation {
+  /* Sidebar */
+  box-shadow: none !important;
+  padding-top: 5px;
+  padding-right: 15px; /* Increase the size of the sidebar */
+  box-sizing: content-box; /* Allow for padding to expand the size */
+}
+
 #header {
-  /* padding: 15px; */
+  padding: 5px;
   box-sizing: content-box;
+  border: none !important;
 }
 
 .new-dropdown-menu li {
   border: none !important;
+}
+
+#navigation ul li:first-child {
+  display: none;
+}
+
+#nav-settings {
+  transition: 0.2s;
+}
+
+#nav-settings:hover {
+  /* Topbar Settings animation */
+  animation: spin 1s linear infinite;
+}
+
+/* Navigation Serach */
+.navbar-search,
+.navbar-search * {
+  border-radius: var(--border-radius) !important;
+}
+
+.rbx-header .navbar-search {
+  background-color: var(--theme-primary) !important;
+}
+
+.rbx-left-col li {
+  /* Sidebar Buttons */
+  padding: 5px; /* Adding padding for the buttons */
 }
 
 /* Buttons */
@@ -138,11 +208,33 @@ button {
   /* Use the secondary theme colour and no border. */
   border: none !important;
   background-color: var(--theme-secondary) !important;
+  color: var(--theme-inverted)!important;
+  padding: 15px; /* Add some more padding - Not sure if this will disrupt other buttons. */
 }
+
+.btn-cta-md {
+  /* This kind of button has a inverted background, with inverted text. */
+  /* Acts as a yes button. */
+  /* Add padding & Border radius only. */
+  padding: 15px; 
+}
+
 
 .btn-common-play-game-lg {
   /* The play button */
   background-color: #26a269 !important;
+}
+
+/* Content Adjustment */
+/* Because of the expanded topbar and header, the containers need to be adjusted. */
+
+.container-main {
+  /* Use 45px instead of 40 default, as the topbar has been expanded. */
+  margin: 45px auto 0;
+}
+
+.content {
+  padding-left: 15px; /* Add padding instead of margin for the content class, as it already has a margin. */
 }
 
 /* Fonts */
@@ -162,16 +254,18 @@ h5,
 h6,
 button,
 span,
-textarea {
+textarea,
+input,
+#navigation * {
   font-family: "Poppins", sans-serif !important;
 }
-.text,
-#navigation * {
+.text {
   font-family: "Montserrat", sans-serif !important;
   font-weight: 500;
 }
 
-.builder-font h1 {
+.builder-font h1,
+.builder-font .game-card-container .game-card-name {
   font-weight: 600;
 }
 .builder-font h2 {
@@ -237,14 +331,15 @@ textarea {
 }
 
 .dialog-container .dialog-input-container {
-  background-color: var(--theme-secondary)!important;
+  background-color: var(--theme-secondary) !important;
 }
 
 .dialog-body {
-  background-color: var(--theme-primary)!important;;
+  background-color: var(--theme-primary) !important;
 }
 
-.dialog-container .dialog-input-container, .dialog-input-container .dialog-input {
+.dialog-container .dialog-input-container,
+.dialog-input-container .dialog-input {
   border-radius: 0px 0px var(--border-radius) var(--border-radius) !important;
 }
 
@@ -280,7 +375,7 @@ textarea {
 .game-badges-list,
 .tab-content,
 .section-content-off,
-.section-content,
+:not(.remove-panel) .section-content .section-content:not(.remove-panel), /* Home Menu Friends */
 .menu-vertical {
   background-color: var(--theme-primary) !important;
 }
