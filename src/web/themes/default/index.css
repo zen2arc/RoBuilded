@@ -249,18 +249,12 @@ button {
 
 .container-main {
   /* Use 45px instead of 40 default, as the topbar has been expanded. */
-  margin: 45px auto 0;
+  /* Also add a 15px because of the sidebar. */
+  margin: 45px auto 0 15px; 
 }
 
 .content {
   padding-left: 15px; /* Add padding instead of margin for the content class, as it already has a margin. */
-}
-
-@media (min-width: 1688px) {
-  .no-gutter-ads.logged-in .content {
-    /* This should work */
-    margin-left: calc(175px + 15px);
-  }
 }
 
 /* Fonts */
@@ -292,10 +286,10 @@ input,
 
 .builder-font h1,
 .builder-font .game-card-container .game-card-name {
-  font-weight: 600;
+  font-weight: 600!important;
 }
 .builder-font h2 {
-  font-weight: 500;
+  font-weight: 500!important;
 }
 
 .alert {
