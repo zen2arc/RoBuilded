@@ -186,6 +186,12 @@ button {
   animation: spin 1s linear infinite;
 }
 
+/* Age bracket in topbar */
+
+.age-bracket-label-age {
+  display: none;
+}
+
 /* Navigation Serach */
 .navbar-search,
 .navbar-search * {
