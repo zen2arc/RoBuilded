@@ -1,3 +1,5 @@
+// This script will execute while the DOM is still loading. document_start
+
 import { storage_get } from "../modules/storage";
 import { inject_js, inject_css } from "../modules/inject";
 
