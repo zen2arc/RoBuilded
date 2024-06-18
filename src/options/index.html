@@ -8,7 +8,7 @@
       font-family: "Poppins", sans-serif !important;
     }
 
-    .main_panel {
+    .panel {
       border-radius: 25px;
       background-color: #393b3d;
       padding: 12px;
@@ -37,17 +37,25 @@
       color: white;
       text-decoration: none;
     }
+
+    #sidebar_selection {
+      display: grid;
+    }
+
+    #close_sidebar_buttons {
+      display: inline;
+    }
   </style>
   <title>Rofreshed Options</title>
 </head>
 <body>
   <div class="content">
     <h1>Options</h1>
-    <div class="main_panel">
+    <div class="panel" id="main_panel">
       <h2 class="header">Theming</h2>
       <label for="theme">Theme to use:</label>
       <select class="option" name="theme" id="theme_selection">
-        <option value="default">Rofreshed* </option>
+        <option value="default">Rofreshed*</option>
         <option value="roblox">Roblox Default</option>
       </select>
       <span class="subtext">*Light theme is not fully supported.</span>
@@ -55,19 +63,98 @@
       <h2 class="header">Tweaks</h2>
       <h3 class="header">General</h3>
       <label for="clean_ads">Remove ads:</label>
-      <input type="checkbox" name="clean_ads" class="option" id="ublock_checkbox" /><br>
-      <span class="subtext">The above checkbox will redirect you to <a href="https://github.com/gorhill/uBlock">github.com/gorhill/uBlock</a>.</span><br>
+      <input
+        type="checkbox"
+        name="clean_ads"
+        class="option"
+        id="ublock_checkbox"
+      /><br />
+      <span class="subtext"
+        >The above checkbox will redirect you to
+        <a href="https://github.com/gorhill/uBlock">github.com/gorhill/uBlock</a
+        >.</span
+      ><br />
+
+      <button id="clean_sidebar_button">
+        Customize buttons on the sidebar
+      </button>
 
       <h3 class="header">Home Page</h3>
       <label for="clean_home">Remove clutter from Home:</label>
-      <input type="checkbox" name="clean_home" class="option" id="clean_home_checkbox" />
+      <input
+        type="checkbox"
+        name="clean_home"
+        class="option"
+        id="clean_home_checkbox"
+      />
       <label for="clean_home" class="subtext"
         >e.g. "Today's Picks" & Sponsored items.</label
       >
 
       <h3 class="header">Game Page</h3>
       <label for="clean_game">Remove Recommended:</label>
-      <input type="checkbox" name="clean_game" class="option" id="clean_game_checkbox" />
+      <input
+        type="checkbox"
+        name="clean_game"
+        class="option"
+        id="clean_game_checkbox"
+      />
+    </div>
+    <div style="display: none" id="sidebar_buttons" class="panel">
+      <h2 class="header">Sidebar Buttons</h2>
+      <button id="close_sidebar_buttons">Close Options</button>
+      <div id="sidebar_selection">
+        <!-- Allow people to remove everything APART from avatar -->
+        <div>
+          <label for="nav-profile">Remove Profile:</label>
+          <input type="checkbox" name="nav-profile" class="option" />
+        </div>
+
+        <div>
+          <label for="nav-message">Remove Messages:</label>
+          <input type="checkbox" name="nav-message" class="option" />
+        </div>
+
+        <div>
+          <label for="nav-friends">Remove Friends:</label>
+          <input type="checkbox" name="nav-friends" class="option" />
+        </div>
+
+        <div>
+          <label for="nav-inventory">Remove Inventory:</label>
+          <input type="checkbox" name="nav-inventory" class="option" />
+        </div>
+
+        <div>
+          <label for="nav-trade">Remove Trade:</label>
+          <input type="checkbox" name="nav-trade" class="option" />
+        </div>
+
+        <div>
+          <label for="nav-group">Remove Groups:</label>
+          <input type="checkbox" name="nav-group" class="option" />
+        </div>
+
+        <div>
+          <label for="nav-blog">Remove Blog:</label>
+          <input type="checkbox" name="nav-blog" class="option" />
+        </div>
+
+        <div>
+          <label for="nav-shop">Remove Official Store:</label>
+          <input type="checkbox" name="nav-shop" class="option" />
+        </div>
+
+        <div>
+          <label for="nav-giftcards">Remove Gift Cards:</label>
+          <input type="checkbox" name="nav-giftcards" class="option" />
+        </div>
+
+        <div>
+          <label for="upgrade-now-button">Remove "Get Premium" button:</label>
+          <input type="checkbox" name="upgrade-now-button" class="option" />
+        </div>
+      </div>
     </div>
   </div>
   <script type="module" src="options.js"></script>
