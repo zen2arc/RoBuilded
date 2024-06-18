@@ -12,6 +12,7 @@
   --theme-content: #232527;
   --theme-primary: #393b3d;
   --theme-secondary: #1c1c1d;
+  --theme-header: #191b1d;
   --theme-transparent: #13141475;
   --theme-extreme: #000;
 
@@ -20,9 +21,10 @@
   --colour-danger: #ae1000;
 
   --theme-loading-spinner: rgba(255, 255, 255, 0.65) rgba(255, 255, 255, 0.75)
-  rgba(255, 255, 255, 0.85) rgba(255, 255, 255, 1);
+    rgba(255, 255, 255, 0.85) rgba(255, 255, 255, 1);
 
   --theme-inverted: #fff;
+  --theme-inverted-transparent: #ffffff1a;
 }
 
 .light-theme {
@@ -38,13 +40,14 @@
   --colour-danger: #ae1000;
 
   --theme-loading-spinner: rgba(0, 0, 0, 0.65) rgba(0, 0, 0, 0.75)
-  rgba(0, 0, 0, 0.85) rgb(0, 0, 0);
+    rgba(0, 0, 0, 0.85) rgb(0, 0, 0);
 
   --theme-inverted: #000000;
 }
 
-body, .content {
-  background-color: var(--theme-content);
+body,
+.content {
+  background-color: var(--theme-content)!important;
 }
 
 .content {
@@ -148,7 +151,6 @@ button {
   padding: 10px;
 }
 
-
 /* Header & Navigation */
 
 #navigation .rbx-divider {
@@ -157,13 +159,26 @@ button {
 
 #navigation {
   /* Sidebar */
+  background-color: var(--theme-header);
   box-shadow: none !important;
   padding-top: 5px;
   padding-right: 15px; /* Increase the size of the sidebar */
   box-sizing: content-box; /* Allow for padding to expand the size */
 }
 
+.dark-theme .rbx-header .rbx-navbar li {
+  transition: 0.4s;
+  border-radius: var(--border-radius);
+}
+
+.dark-theme .rbx-header .rbx-navbar li:hover {
+  background-color: var(--theme-inverted-transparent);
+  border: none !important;
+}
+
 #header {
+  background-color: var(--theme-header);
+
   padding: 5px;
   box-sizing: content-box;
   border: none !important;
@@ -186,15 +201,14 @@ button {
   animation: spin 1s linear infinite;
 }
 
-/* Age bracket in topbar */
-
 .age-bracket-label-age {
+  /* Age bracket in topbar */
   display: none;
 }
 
-/* Navigation Serach */
 .navbar-search,
 .navbar-search * {
+  /* Navigation Serach */
   border-radius: var(--border-radius) !important;
 }
 
@@ -214,7 +228,7 @@ button {
   /* Use the secondary theme colour and no border. */
   border: none !important;
   background-color: var(--theme-secondary) !important;
-  color: var(--theme-inverted)!important;
+  color: var(--theme-inverted) !important;
   padding: 15px; /* Add some more padding - Not sure if this will disrupt other buttons. */
 }
 
@@ -222,9 +236,8 @@ button {
   /* This kind of button has a inverted background, with inverted text. */
   /* Acts as a yes button. */
   /* Add padding & Border radius only. */
-  padding: 15px; 
+  padding: 15px;
 }
-
 
 .btn-common-play-game-lg {
   /* The play button */
@@ -365,6 +378,12 @@ input,
 
 /* Game Page */
 
+.card-item {
+  /* For the server selection */
+  background: var(--theme-transparent);
+  border-radius: var(--border-radius);
+}
+
 .game-main-content,
 .tab-content,
 .game-badges-list {
@@ -384,6 +403,10 @@ input,
 :not(.remove-panel) .section-content .section-content:not(.remove-panel), /* Home Menu Friends */
 .menu-vertical {
   background-color: var(--theme-primary) !important;
+}
+
+.dark-theme .rbx-tab .rbx-tab-heading {
+  background-color: var(--theme-primary);
 }
 
 .voting-panel .loading {
