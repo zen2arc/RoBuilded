@@ -32,12 +32,13 @@
   --theme-content: #f2f4f5;
   --theme-primary: #dfdfdf;
   --theme-secondary: #7e7e7e;
+  --theme-header: #d4d4d4;
   --theme-transparent: #b4b4b475;
   --theme-extreme: #ffffff;
 
   --theme-button-secondary: #6e6e6e;
 
-  --colour-danger: #ae1000;
+  --colour-danger: #ca1400;
 
   --theme-loading-spinner: rgba(0, 0, 0, 0.65) rgba(0, 0, 0, 0.75)
     rgba(0, 0, 0, 0.85) rgb(0, 0, 0);
