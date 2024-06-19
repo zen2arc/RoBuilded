@@ -12,19 +12,14 @@ Rofreshed: The default, very rounded theme.
 
 Roblox Default: Roblox default.
 ## Build Instructions
-Ensure that you have [Node.js](https://nodejs.org) and [npm](https://www.npmjs.com/) installed.
+Rofreshed uses Rollup with the [rollup-plugin-chrome-extension](https://www.npmjs.com/package/rollup-plugin-chrome-extension) plugin, so ensure that you have [Node.js](https://nodejs.org) and [npm](https://www.npmjs.com/) installed.
 
-Clone the repository:
-
-``$ git clone https://github.com/PainfulColour/RoFreshed.git``
-
-Install the packages:
-
-``$ npm install``
-
-Build it:
-
-``$ npm run build``
+```shell
+$ git clone https://github.com/PainfulColour/RoFreshed.git
+$ cd RoFreshed
+$ npm install
+$ npm run build
+```
 
 ## License
-This project is licensed under the MIT License. View LICENSE for the full text.
+Rofresehd is licensed under the MIT License. View LICENSE for the full text.
