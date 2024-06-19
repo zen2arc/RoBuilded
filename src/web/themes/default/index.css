@@ -465,8 +465,9 @@ input,
   background-color: transparent !important;
 }
 
-.avatar .avatar-card-image {
-  background-color: transparent !important;
+.icon-placeholder-avatar-headshot {
+  /* Remove the background placeholder for the friends list*/
+  background-image: none !important;
 }
 
 /* Group Page */
