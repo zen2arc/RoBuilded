@@ -1,5 +1,6 @@
 // This script will execute after the DOM has finished loaded. document_end
 import { storage_get } from "../modules/storage";
+import { inject_js } from "../modules/inject";
 
 // Implement the sidebar button removal feature.
 // sidebar_removal_lists is the names of all the ids of the sidebar buttons.
@@ -35,3 +36,7 @@ if ((await storage_get("enabled", false)) == false) {
     async_run();
   }
 }
+
+// Load the style index.js
+let style = (await storage_get("theme")) || "default";
+inject_js(`web/themes/${style}/index.js`);

@@ -21,7 +21,8 @@
   "web_accessible_resources": [
     "web/pages/*/*.js",
     "web/notsupported.html",
-    "web/themes/*/index.css"
+    "web/themes/*/index.css",
+    "web/themes/*/index.js"
   ],
   "options_ui": {
     "page": "/options/index.html"
