@@ -17,7 +17,7 @@ Rofreshed uses Rollup with the [rollup-plugin-chrome-extension](https://www.npmj
 ```shell
 $ git clone https://github.com/PainfulColour/RoFreshed.git
 $ cd RoFreshed
-$ npm install
+$ npm ci
 $ npm run build
 ```
 
