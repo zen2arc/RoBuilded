@@ -1,4 +1,4 @@
-console.log("Rofreshed: Clean Home running!");
+console.log("Rofreshed: Clean Home started!");
 
 /**
  *
@@ -57,11 +57,19 @@ function listener(details) {
   return {};
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  { urls: ["https://apis.roblox.com/discovery-api/omni-recommendation"], types: ["xmlhttprequest"] },
-  ["blocking"]
-);
+var has_ran = false;
+var should_run = false;
+
+function clean_game_init() {
+  browser.webRequest.onBeforeRequest.addListener(
+    listener,
+    {
+      urls: ["https://apis.roblox.com/discovery-api/omni-recommendation"],
+      types: ["xmlhttprequest"],
+    },
+    ["blocking"]
+  );
+}
 
 /* xhook.after(function (request, response) {
   if (
@@ -76,3 +84,13 @@ browser.webRequest.onBeforeRequest.addListener(
   }
 });
  */
+
+browser.runtime.onMessage.addListener(function (message) {
+  if (message.subject == "clean_home_run") {
+    should_run = true;
+    clean_game_init();
+  } else if (message.subject == "clean_home_stop") {
+    should_run = false;
+    has_ran = false;
+  }
+});

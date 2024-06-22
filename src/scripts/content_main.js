@@ -18,7 +18,9 @@ if ((await storage_get("enabled", false)) == false) {
   // Home Page
   let clean_home = await storage_get("clean_home");
   if (clean_home) {
-    inject_js("web/pages/home/clean_home.js");
+    browser.runtime.sendMessage({ subject: "clean_home_run"});
+  } else {
+    browser.runtime.sendMessage({ subject: "clean_home_stop"});
   }
 
   // Game Page
