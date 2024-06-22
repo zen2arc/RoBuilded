@@ -39,7 +39,7 @@
     "default_popup": "popup/popup.html"
   },
   "background": {
-    "scripts": ["pages/game/clean_game.js"],
+    "scripts": ["pages/game/clean_game.js", "pages/game/clean_home.js"],
     "persistent": false
   },
   "content_scripts": [
