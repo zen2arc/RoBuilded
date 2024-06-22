@@ -387,10 +387,15 @@ input,
   border-radius: var(--border-radius);
 }
 
-.game-main-content,
+:not(.btr-game-main-container)>.game-main-content, /* Make it work well with BTRoblox */
 .tab-content,
 .game-badges-list {
   padding: 12px !important;
+}
+
+:not(.btr-game-main-container)>.game-main-content, /* Make it work well with BTRoblox */
+.tab-content,
+.game-badges-list {
   margin-top: 12px;
 }
 
@@ -487,7 +492,7 @@ input,
 /* Game Lanuching Modal. Only for dark theme */
 .dark-theme #modal-dialog {
   background-color: #000;
-  background-size: 95% 95% !important;
+  background-size: 85% 105% !important;
   background-position: 50% 50% !important;
   background-repeat: no-repeat !important;
 }
@@ -497,6 +502,12 @@ input,
   width: 75px;
   height: 75px;
   background-size: cover;
+}
+
+.dark-theme #modal-dialog .close {
+  /* Close Button */
+  z-index: 1000;
+  position: relative;
 }
 
 .dark-theme #modal-dialog .modal-content {
