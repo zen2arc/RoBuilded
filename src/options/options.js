@@ -8,7 +8,7 @@ function update_settings() {
     if (option.type == "checkbox") {
       option.checked = await storage_get(option.name);
     } else {
-      option.value = await storage_get(option.name);
+      option.value = await storage_get(option.name) || element.getAttribute("fallback");
     }
   });
 }
