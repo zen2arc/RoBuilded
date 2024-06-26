@@ -22,4 +22,4 @@ $ npm run build
 ```
 
 ## License
-Rofresehd is licensed under the MIT License. View LICENSE for the full text.
+Rofreshed is licensed under the MIT License. View LICENSE for the full text.
