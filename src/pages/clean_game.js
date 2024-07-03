@@ -9,7 +9,7 @@ function clean_game_init() {
   let pattern = "https://games.roblox.com/v1/games/recommendations/game/*";
 
   browser.webRequest.onBeforeRequest.addListener(
-    function (requestDetails) {
+    function () {
       if (!should_run) {
         return false;
       }
@@ -26,7 +26,7 @@ browser.runtime.onMessage.addListener(function(message) {
   if (message.subject == "clean_game_run") {
     should_run = true;
     clean_game_init();
-  } else if (message.subject == "clean_game_stop") {
+  } else if (message.subject == "clean_game_stop" || message.subject == "disabled") {
     should_run = false;
     has_ran = false;
   } 

@@ -1,5 +1,5 @@
-console.log("Rofreshed: Clean Home started!");
-
+var has_ran = false;
+var should_run = false;
 /**
  *
  * @param {Array} sorts The sort to clean.
@@ -25,6 +25,9 @@ function clean_sorts(sorts) {
 }
 
 function listener(details) {
+  if (!should_run) {
+    return false;
+  }
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let decoder = new TextDecoder("utf-8");
   let encoder = new TextEncoder();
@@ -57,10 +60,11 @@ function listener(details) {
   return {};
 }
 
-var has_ran = false;
-var should_run = false;
+function clean_home_init() {
+  if (has_ran) {return false;}
+  has_ran = true;
+  console.log("Rofreshed: Clean Home started!");
 
-function clean_game_init() {
   browser.webRequest.onBeforeRequest.addListener(
     listener,
     {
@@ -88,8 +92,8 @@ function clean_game_init() {
 browser.runtime.onMessage.addListener(function (message) {
   if (message.subject == "clean_home_run") {
     should_run = true;
-    clean_game_init();
-  } else if (message.subject == "clean_home_stop") {
+    clean_home_init();
+  } else if (message.subject == "clean_home_stop" || message.subject == "disabled") {
     should_run = false;
     has_ran = false;
   }
