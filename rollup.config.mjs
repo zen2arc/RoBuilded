@@ -1,6 +1,7 @@
 import { chromeExtension, simpleReloader } from 'rollup-plugin-chrome-extension'
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
+import copy from 'rollup-plugin-copy'
 
 export default {
   input: 'src/manifest.json',
@@ -14,6 +15,11 @@ export default {
     }),
     simpleReloader(),
     nodeResolve(),
-    commonjs()
+    commonjs(),
+    copy({
+      targets: [
+        {src: "LICENSE", dest: "build/"} /* Copy the license */
+      ]
+    })
   ],
 }
