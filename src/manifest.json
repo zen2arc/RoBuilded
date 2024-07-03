@@ -1,9 +1,6 @@
 {
   "manifest_version": 2,
   "name": "Rofreshed",
-  "version": "1.3.0",
-
-  "description": "Refreshing the Roblox Website",
 
   "icons": {
     "48": "icons/icon_48.png",
@@ -12,7 +9,6 @@
 
   "permissions": [
     "storage",
-    "scripting",
     "webRequest",
     "webRequestBlocking",
     "*://*.roblox.com/*"
@@ -40,7 +36,7 @@
   },
   "background": {
     "scripts": ["pages/clean_game.js", "pages/clean_home.js"],
-    "persistent": false
+    "persistent": true
   },
   "content_scripts": [
     {

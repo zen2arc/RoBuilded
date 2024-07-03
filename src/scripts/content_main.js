@@ -3,11 +3,6 @@
 import { storage_get } from "../modules/storage";
 import { inject_css } from "../modules/inject";
 
-if (typeof browser == "undefined") {
-  alert("Rofreshed will not work on this browser.");
-  window.location.href = chrome.runtime.getURL("web/notsupported.html");
-}
-
 if ((await storage_get("enabled", false)) == false) {
   console.log("Rofreshed Disabled");
   browser.runtime.sendMessage({ subject: "disabled" });
