@@ -40,3 +40,8 @@ if ((await storage_get("enabled", false)) == false) {
 // Load the style index.js
 let style = (await storage_get("theme")) || "default";
 inject_js(`web/themes/${style}/index.js`);
+
+let performance_theming = (await storage_get("performance_theming")) || false
+if (!performance_theming) {
+  document.body.classList.add("graphic_theming")
+}

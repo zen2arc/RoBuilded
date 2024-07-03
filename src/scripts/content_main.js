@@ -1,7 +1,7 @@
 // This script will execute while the DOM is still loading. document_start
 
 import { storage_get } from "../modules/storage";
-import { inject_js, inject_css } from "../modules/inject";
+import { inject_css } from "../modules/inject";
 
 if (typeof browser == "undefined") {
   alert("Rofreshed will not work on this browser.");
@@ -34,5 +34,7 @@ if ((await storage_get("enabled", false)) == false) {
 
   // Styles
   let style = (await storage_get("theme")) || "default";
-  inject_css(`web/themes/${style}/index.css`);
+  let nocache_token = Math.random() * 1000;
+  // Prevent caching by using a nocache token
+  inject_css(`web/themes/${style}/index.css?nocache=${nocache_token}`);
 }

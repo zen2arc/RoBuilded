@@ -1,3 +1,6 @@
+/* 
+  Rofreshed theme
+*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
@@ -13,12 +16,14 @@
   --theme-primary: #393b3d;
   --theme-secondary: #1c1c1d;
   --theme-header: #191b1d;
+  --theme-header-transparent: #191b1d18;
   --theme-transparent: #13141475;
   --theme-extreme: #000;
 
   --theme-button-secondary: #232324;
 
   --colour-danger: #ae1000;
+  --colour-success: #219053;
 
   --theme-loading-spinner: rgba(255, 255, 255, 0.65) rgba(255, 255, 255, 0.75)
     rgba(255, 255, 255, 0.85) rgba(255, 255, 255, 1);
@@ -110,7 +115,7 @@ button {
 .modal-content,
 .btn-control-md,
 .dropdown-menu,
-.dropdown-menu *,
+.dropdown-menu *:not(.new-navbar-search-anchor *):not(.new-navbar-search-anchor), /* Add exemption for searchbar results */
 .tab-content,
 .menu-vertical,
 #chat-main,
@@ -179,11 +184,31 @@ button {
 }
 
 #header {
-  background-color: var(--theme-header);
-
+  transition: 0.5s background-color;
   padding: 5px;
   box-sizing: content-box;
   border: none !important;
+}
+
+.graphic_theming #header, .graphic_theming .navbar-search ul.dropdown-menu {
+  /* 
+  graphic_theming is a class which will be appiled to body to indicate that graphic intensive effects
+  can be enabled
+  */
+  backdrop-filter: brightness(0.6) blur(32px);
+}
+
+.navbar-search ul.dropdown-menu {
+  margin-top: 16px!important;
+}
+
+.graphic_theming #header.header_has_scrolled {
+  /* header_has_scrolled class is applied using javascript */
+  background-color: var(--theme-header-transparent);
+}
+
+#header:not(.header_has_scrolled), :not(.graphic_theming) #header {
+  background-color: var(--theme-header);
 }
 
 .new-dropdown-menu li {
@@ -209,13 +234,14 @@ button {
 }
 
 .navbar-search,
-.navbar-search * {
+.navbar-search .input-group * {
   /* Navigation Serach */
   border-radius: var(--border-radius) !important;
 }
 
-.rbx-header .navbar-search {
-  background-color: var(--theme-primary) !important;
+.graphic_theming .navbar-search .input-group *,
+.graphic_theming .navbar-search, .graphic_theming .navbar-search ul.dropdown-menu {
+  background-color: var(--theme-header-transparent) !important;
 }
 
 .rbx-left-col li {
@@ -296,7 +322,18 @@ input,
 
 .alert {
   border-radius: 0px 0px var(--border-radius) var(--border-radius);
+}
+
+.alert:not(.on) {
+  top: -60px!important;
+}
+
+div.alert:not(.alert-success) { 
   background-color: var(--colour-danger) !important;
+}
+
+div.alert-success {
+  background-color: var(--colour-success) !important;
 }
 
 /* Home */

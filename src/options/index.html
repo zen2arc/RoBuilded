@@ -48,6 +48,7 @@
   </style>
   <title>Rofreshed Options</title>
 </head>
+
 <body>
   <div class="content">
     <h1>Options</h1>
@@ -56,36 +57,32 @@
       <label for="theme">Theme to use:</label>
       <select class="option" name="theme" id="theme_selection" fallback="default">
         <option value="default">Rofreshed*</option>
-        <option value="roblox">Roblox Default</option>
+        <option value="roblox">Roblox Default**</option>
       </select>
+      <br />
       <span class="subtext">*Light theme is not fully supported.</span>
+      <br />
+      <span class="subtext">**Performance mode not supported.</span>
       <hr />
       <h2 class="header">Tweaks</h2>
       <h3 class="header">General</h3>
       <button id="clean_sidebar_button">
         Customize buttons on the sidebar
       </button>
+      <br />
+      <label for="performance_theming">Performance mode:</label>
+      <input type="checkbox" name="performance_theming" class="option" id="performance_theming_checkbox" />
+      <label for="performance_theming" class="subtext">Disables graphic intensive effects such as topbar blur
+        effects.</label>
 
       <h3 class="header">Home Page</h3>
       <label for="clean_home">Remove clutter from Home:</label>
-      <input
-        type="checkbox"
-        name="clean_home"
-        class="option"
-        id="clean_home_checkbox"
-      />
-      <label for="clean_home" class="subtext"
-        >e.g. "Today's Picks" & Sponsored items.</label
-      >
+      <input type="checkbox" name="clean_home" class="option" id="clean_home_checkbox" />
+      <label for="clean_home" class="subtext">e.g. "Today's Picks" & Sponsored items.</label>
 
       <h3 class="header">Game Page</h3>
       <label for="clean_game">Remove Recommended:</label>
-      <input
-        type="checkbox"
-        name="clean_game"
-        class="option"
-        id="clean_game_checkbox"
-      />
+      <input type="checkbox" name="clean_game" class="option" id="clean_game_checkbox" />
     </div>
     <div style="display: none" id="sidebar_buttons" class="panel">
       <h2 class="header">Sidebar Buttons</h2>

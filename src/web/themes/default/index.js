@@ -1,28 +1,9 @@
+import { wait_for_element } from "../../../modules/common";
+
 // Index.js will lanuch when styles are run.
 
-function WaitForElement(selector) {
-  // thx stackoverflow :)
-  return new Promise((resolve) => {
-    if (document.querySelector(selector)) {
-      return resolve(document.querySelector(selector));
-    }
-
-    const observer = new MutationObserver((mutations) => {
-      if (document.querySelector(selector)) {
-        observer.disconnect();
-        resolve(document.querySelector(selector));
-      }
-    });
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true,
-    });
-  });
-}
-
 // Only for darktheme
-WaitForElement(
+wait_for_element(
   ".dark-theme #game-details-carousel-container img"
 ).then((element) => {
   console.log("applying Modified Styles.");
@@ -32,5 +13,15 @@ WaitForElement(
     modal_dialog.style.background = `url(${element.src})`;
   }
 });
+
+document.addEventListener("scroll", function() {
+  let has_scrolled = window.scrollY
+  let header = document.getElementById("header");
+  if (has_scrolled) {
+    header.classList.add("header_has_scrolled");
+  } else {
+    header.classList.remove("header_has_scrolled");
+  }
+}); 
 
 console.log("Rofreshed: Rofreshed theme index.js loaded!");
