@@ -477,6 +477,11 @@ div.alert-success {
   padding: 0px;
 }
 
+.social-media-share {
+  /* Doesnt seem to be used */
+  display: none;
+}
+
 .favorite-follow-vote-share {
   display: flex;
   justify-content: center;
