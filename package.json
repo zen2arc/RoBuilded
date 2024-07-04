@@ -17,6 +17,7 @@
     "rollup-plugin-copy": "^3.5.0"
   },
   "dependencies": {
-    "@types/firefox-webext-browser": "^120.0.4"
+    "@types/firefox-webext-browser": "^120.0.4",
+    "xhook": "^1.6.2"
   }
 }
