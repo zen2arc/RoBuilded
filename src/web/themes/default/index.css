@@ -195,7 +195,7 @@ button {
   graphic_theming is a class which will be appiled to body to indicate that graphic intensive effects
   can be enabled
   */
-  backdrop-filter: brightness(0.6) blur(32px);
+  backdrop-filter: brightness(0.7) blur(32px);
 }
 
 .navbar-search ul.dropdown-menu {
