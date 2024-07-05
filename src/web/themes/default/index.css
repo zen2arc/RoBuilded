@@ -532,27 +532,27 @@ div.alert-success {
 }
 
 /* Game Lanuching Modal. Only for dark theme */
-.dark-theme #modal-dialog {
+.dark-theme.graphic_theming #modal-dialog {
   background-color: #000;
   background-size: 85% 105% !important;
   background-position: 50% 50% !important;
   background-repeat: no-repeat !important;
 }
 
-.dark-theme #modal-dialog .icon-logo-r-95 {
+.dark-theme.graphic_theming #modal-dialog .icon-logo-r-95 {
   /* Make the logo smaller */
   width: 75px;
   height: 75px;
   background-size: cover;
 }
 
-.dark-theme #modal-dialog .close {
+.dark-theme.graphic_theming #modal-dialog .close {
   /* Close Button */
   z-index: 1000;
   position: relative;
 }
 
-.dark-theme #modal-dialog .modal-content {
+.dark-theme.graphic_theming #modal-dialog .modal-content {
   backdrop-filter: blur(20px);
   background-color: transparent !important;
   background: radial-gradient(
@@ -565,16 +565,16 @@ div.alert-success {
 
 /* Make a custom download button */
 
-.dark-theme #modal-dialog .modal-btns #confirm-btn {
+.dark-theme.graphic_theming #modal-dialog .modal-btns #confirm-btn {
   background: transparent;
   color: var(--theme-inverted);
 }
 
 /* The help button */
-.dark-theme #modal-dialog .modal-footer.text-footer a {
+.dark-theme.graphic_theming #modal-dialog .modal-footer.text-footer a {
   opacity: 0.2;
 }
 
-.dark-theme #modal-dialog .modal-header .icon-close {
+.dark-theme.graphic_theming #modal-dialog .modal-header .icon-close {
   background-color: transparent !important;
 }

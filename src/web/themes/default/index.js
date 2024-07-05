@@ -4,7 +4,7 @@ import { wait_for_element } from "../../../modules/common";
 
 // Only for darktheme
 wait_for_element(
-  ".dark-theme #game-details-carousel-container img"
+  ".dark-theme.graphic_theming #game-details-carousel-container img"
 ).then((element) => {
   console.log("applying Modified Styles.");
   let modal_dialog = document.getElementById("modal-dialog");
