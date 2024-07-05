@@ -15,7 +15,8 @@
   ],
 
   "web_accessible_resources": [
-    "web/pages/*/*.js",
+    "pages/clean_home.js",
+    "web/pages/*.*",
     "web/notsupported.html",
     "web/themes/*/index.css",
     "web/themes/*/index.js"
