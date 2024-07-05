@@ -69,4 +69,4 @@ browser.runtime.onMessage.addListener(function (message) {
   }
 });
 
-export default clean_sorts;
+export default clean_home_sorts;
