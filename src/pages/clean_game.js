@@ -1,3 +1,4 @@
+// Clean game for Firefox
 var has_ran = false;
 var should_run = false;
 
