@@ -1,7 +1,7 @@
 # Rofreshed
 Rofreshed is a Manifest V2 extension for Firefox & others (with [webextension-polyfill](https://github.com/mozilla/webextension-polyfill)) to stylize the Roblox Website. Report any bugs you see & if you have any suggestions, let me know.
 ## Features
-- Rearrange and remove buttons on the sidebar
+- Remove buttons on the sidebar
 - Remove clutter (such as "Today's Picks") from the home page
 - Remove recommended games from the game page
 
