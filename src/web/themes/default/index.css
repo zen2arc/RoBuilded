@@ -104,6 +104,9 @@ button {
 .btn-secondary-lg,
 .btn-secondary-md,
 .btn-cta-md,
+.btn-control-md,
+.btn-primary-md,
+.btn-growth-md,
 .rbx-tab,
 .game-stat-container,
 .favorite-follow-vote-share,
@@ -113,7 +116,6 @@ button {
 #horizontal-tabs,
 .modal-dialog,
 .modal-content,
-.btn-control-md,
 .dropdown-menu,
 .dropdown-menu *:not(.new-navbar-search-anchor *):not(.new-navbar-search-anchor), /* Add exemption for searchbar results */
 .tab-content,
@@ -127,7 +129,9 @@ button {
 .group-image,
 .group-image *,
 .social-link-icon,
-.popover {
+.popover,
+.copyright-container .language-selector-wrapper .input-group-btn .input-dropdown-btn /* Footer Language Switch */ 
+{
   border-radius: var(--border-radius) !important;
 }
 
@@ -251,7 +255,7 @@ button {
 
 /* Buttons */
 
-.btn-secondary-md {
+.btn-secondary-md, .btn-control-md {
   /* This kind of button has a outline and a transparent background. */
   /* Use the secondary theme colour and no border. */
   border: none !important;
@@ -260,9 +264,9 @@ button {
   padding: 15px; /* Add some more padding - Not sure if this will disrupt other buttons. */
 }
 
-.btn-cta-md {
+.btn-cta-md, .btn-primary-md, .btn-growth-md {
   /* This kind of button has a inverted background, with inverted text. */
-  /* Acts as a yes button. */
+  /* Acts as a Confirm/Primary button. */
   /* Add padding & Border radius only. */
   padding: 15px;
 }
@@ -445,7 +449,7 @@ div.alert-success {
 .game-badges-list,
 .tab-content,
 .section-content-off,
-:not(.remove-panel) .section-content .section-content:not(.remove-panel), /* Home Menu Friends */
+:not(.remove-panel) .section-content:not(.remove-panel), /* Home Menu Friends */
 .menu-vertical {
   background-color: var(--theme-primary) !important;
 }
@@ -515,6 +519,13 @@ div.alert-success {
 .icon-placeholder-avatar-headshot {
   /* Remove the background placeholder for the friends list*/
   background-image: none !important;
+}
+
+/* Footer */
+
+.container-footer {
+  background-color: var(--theme-secondary)!important;
+  background: linear-gradient(0deg, var(--theme-secondary) 0%, var(--theme-secondary) 65%, var(--theme-content) 100%)!important; 
 }
 
 /* Group Page */
