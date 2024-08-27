@@ -39,10 +39,12 @@ function clean_home_sorts(sorts) {
     // 100000000 is the topicid for recommended
     // 400000000 is the topicid for sponsored
     // 100000008 is the topic id for today's picks
+    // 100000010 is the The Games event (and maybe more events)
     if (
       sort["topicId"] == 100000000 ||
       sort["topicId"] == 400000000 ||
       sort["topicId"] == 100000008 ||
+      sort["topicId"] == 100000010 ||
       sort["treatmentType"] == "SortlessGrid"
     ) {
       //sorts.splice(index, 1);
