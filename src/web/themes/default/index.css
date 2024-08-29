@@ -264,7 +264,7 @@ button {
   padding: 15px; /* Add some more padding - Not sure if this will disrupt other buttons. */
 }
 
-.btn-cta-md, .btn-primary-md, .btn-growth-md {
+.btn-cta-md, .btn-primary-md :not(.carousel-controls), .btn-growth-md {
   /* This kind of button has a inverted background, with inverted text. */
   /* Acts as a Confirm/Primary button. */
   /* Add padding & Border radius only. */
