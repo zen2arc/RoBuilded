@@ -14,7 +14,7 @@ RoBuilded is a Manifest V2 extension for Firefox & others (with [webextension-po
 | RoBuilded Theme (just started development) |
 
 ## Build
-Rofreshed uses Rollup with the [rollup-plugin-chrome-extension](https://www.npmjs.com/package/rollup-plugin-chrome-extension) plugin, so ensure that you have [Node.js](https://nodejs.org) and [npm](https://www.npmjs.com/) installed.
+Rofreshed and Robuilded uses Rollup with the [rollup-plugin-chrome-extension](https://www.npmjs.com/package/rollup-plugin-chrome-extension) plugin, so ensure that you have [Node.js](https://nodejs.org) and [npm](https://www.npmjs.com/) installed.
 
 ```shell
 $ git clone https://github.com/PainfulColour/RoFreshed.git
