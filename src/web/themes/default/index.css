@@ -108,7 +108,6 @@ button {
 .btn-primary-md,
 .btn-growth-md,
 .rbx-tab,
-.game-stat-container,
 .favorite-follow-vote-share,
 .game-title-container,
 .game-main-content,
@@ -130,9 +129,15 @@ button {
 .group-image *,
 .social-link-icon,
 .popover,
-.copyright-container .language-selector-wrapper .input-group-btn .input-dropdown-btn /* Footer Language Switch */ 
-{
+.nav-tabs,
+.copyright-container .language-selector-wrapper .input-group-btn .input-dropdown-btn /* Footer Language Switch */ {
   border-radius: var(--border-radius) !important;
+}
+
+.age-rating-details,
+#game-details-play-button-container button,
+.btn-control-sm {
+  border-radius: var(--lesser-border-radius);
 }
 
 .popover * {
@@ -162,8 +167,9 @@ button {
   padding: 10px;
 }
 
-.dropdown-menu {
-  background-color: var(--theme-primary)!important;
+.dropdown-menu,
+.messages .messageDivider {
+  background-color: var(--theme-primary) !important;
 }
 
 .dark-theme .stack .card-list .card-item {
@@ -202,7 +208,8 @@ button {
   border: none !important;
 }
 
-.graphic_theming #header, .graphic_theming .navbar-search ul.dropdown-menu {
+.graphic_theming #header,
+.graphic_theming .navbar-search ul.dropdown-menu {
   /* 
   graphic_theming is a class which will be appiled to body to indicate that graphic intensive effects
   can be enabled
@@ -211,17 +218,16 @@ button {
 }
 
 .navbar-search ul.dropdown-menu {
-  margin-top: 16px!important;
+  margin-top: 16px !important;
 }
-
-
 
 .graphic_theming #header.header_has_scrolled {
   /* header_has_scrolled class is applied using javascript */
   background-color: var(--theme-header-transparent);
 }
 
-#header:not(.header_has_scrolled), :not(.graphic_theming) #header {
+#header:not(.header_has_scrolled),
+:not(.graphic_theming) #header {
   background-color: var(--theme-header);
 }
 
@@ -254,7 +260,8 @@ button {
 }
 
 .graphic_theming .navbar-search .input-group *,
-.graphic_theming .navbar-search, .graphic_theming .navbar-search ul.dropdown-menu {
+.graphic_theming .navbar-search,
+.graphic_theming .navbar-search ul.dropdown-menu {
   background-color: var(--theme-header-transparent) !important;
 }
 
@@ -263,9 +270,19 @@ button {
   padding: 5px; /* Adding padding for the buttons */
 }
 
+/* Border Colour */
+.border,
+.border-bottom,
+.border-left,
+.border-right,
+.border-top {
+  border-color: var(--theme-content) !important;
+}
+
 /* Buttons */
 
-.btn-secondary-md, .btn-control-md {
+.btn-secondary-md,
+.btn-control-md {
   /* This kind of button has a outline and a transparent background. */
   /* Use the secondary theme colour and no border. */
   border: none !important;
@@ -274,11 +291,20 @@ button {
   padding: 15px; /* Add some more padding - Not sure if this will disrupt other buttons. */
 }
 
-.btn-cta-md, .btn-primary-md :not(.carousel-controls), .btn-growth-md {
+.btn-cta-md,
+.btn-primary-md :not(.carousel-controls),
+.btn-growth-md {
   /* This kind of button has a inverted background, with inverted text. */
   /* Acts as a Confirm/Primary button. */
-  /* Add padding & Border radius only. */
+  /* Add padding & Border radius, with a background colour. */
   padding: 15px;
+  background-color: var(--theme-content) !important;
+}
+
+.btn-control-sm {
+  /* Same as primary button but smaller. Add less padding. */
+  background-color: var(--theme-content) !important;
+  padding: 10px;
 }
 
 .btn-common-play-game-lg {
@@ -339,10 +365,10 @@ input,
 }
 
 .alert:not(.on) {
-  top: -60px!important;
+  top: -60px !important;
 }
 
-div.alert:not(.alert-success) { 
+div.alert:not(.alert-success) {
   background-color: var(--colour-danger) !important;
 }
 
@@ -439,13 +465,31 @@ div.alert-success {
 }
 
 :not(.btr-game-main-container)>.game-main-content, /* Make it work well with BTRoblox */
-.tab-content,
 .game-badges-list {
   padding: 12px !important;
 }
 
+.container-header, .game-description, .game-age-recommendation-details-container, .tab-content .section-content {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.tab-content .stack {
+  border-top: 1px solid var(--theme-content);
+  border-radius: 0px!important;
+}
+
+.game-stat-container {
+  background: transparent;
+}
+
+.tab-content {
+  box-sizing: border-box;
+  padding: 12px 0px 12px 0px; /* GNOME style listboxes */
+}
+
 :not(.btr-game-main-container)>.game-main-content, /* Make it work well with BTRoblox */
-.tab-content,
+:not(.roblox-messages-container)>.tab-content,
 .game-badges-list {
   margin-top: 12px;
 }
@@ -459,7 +503,7 @@ div.alert-success {
 .game-badges-list,
 .tab-content,
 .section-content-off,
-:not(.remove-panel) .section-content:not(.remove-panel), /* Home Menu Friends */
+:not(.remove-panel, .age-rating-details) .section-content:not(.remove-panel, .age-rating-details) :not(.age-rating-details), /* Home Menu Friends */
 .menu-vertical {
   background-color: var(--theme-primary) !important;
 }
@@ -470,11 +514,6 @@ div.alert-success {
 
 .voting-panel .loading {
   display: none !important;
-}
-
-.age-rating-details,
-#game-details-play-button-container button {
-  border-radius: var(--lesser-border-radius);
 }
 
 .favorite-follow-vote-share,
@@ -501,7 +540,6 @@ div.alert-success {
   justify-content: center;
 }
 
-.game-stat-container,
 .favorite-follow-vote-share,
 .age-rating-details,
 .game-title-container,
@@ -534,8 +572,13 @@ div.alert-success {
 /* Footer */
 
 .container-footer {
-  background-color: var(--theme-secondary)!important;
-  background: linear-gradient(0deg, var(--theme-secondary) 0%, var(--theme-secondary) 65%, var(--theme-content) 100%)!important; 
+  background-color: var(--theme-secondary) !important;
+  background: linear-gradient(
+    0deg,
+    var(--theme-secondary) 0%,
+    var(--theme-secondary) 65%,
+    var(--theme-content) 100%
+  ) !important;
 }
 
 /* Group Page */
