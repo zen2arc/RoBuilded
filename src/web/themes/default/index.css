@@ -469,7 +469,7 @@ div.alert-success {
   padding: 12px !important;
 }
 
-.container-header, .game-description, .game-age-recommendation-details-container, .tab-content .section-content {
+.tab-content .container-header, .game-description, .game-age-recommendation-details-container, .tab-content .section-content {
   padding-left: 12px;
   padding-right: 12px;
 }
