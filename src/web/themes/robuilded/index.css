@@ -1,0 +1,591 @@
+/* 
+  Rofreshed theme
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --border-radius: 25px;
+  --lesser-border-radius: 20px;
+
+  --lessest-border-radius: 10px;
+}
+
+.dark-theme {
+  --theme-content: #232527;
+  --theme-primary: #393b3d;
+  --theme-secondary: #1c1c1d;
+  --theme-header: #191b1d;
+  --theme-header-transparent: #191b1d18;
+  --theme-transparent: #13141475;
+  --theme-extreme: #000;
+
+  --theme-button-secondary: #232324;
+
+  --colour-danger: #ae1000;
+  --colour-success: #219053;
+
+  --theme-loading-spinner: rgba(255, 255, 255, 0.65) rgba(255, 255, 255, 0.75)
+    rgba(255, 255, 255, 0.85) rgba(255, 255, 255, 1);
+
+  --theme-inverted: #fff;
+  --theme-inverted-transparent: #ffffff1a;
+}
+
+.light-theme {
+  /* Light theme is not supported as well as dark theme. */
+  --theme-content: #f2f4f5;
+  --theme-primary: #dfdfdf;
+  --theme-secondary: #7e7e7e;
+  --theme-header: #d4d4d4;
+  --theme-transparent: #b4b4b475;
+  --theme-extreme: #ffffff;
+
+  --theme-button-secondary: #6e6e6e;
+
+  --colour-danger: #ca1400;
+
+  --theme-loading-spinner: rgba(0, 0, 0, 0.65) rgba(0, 0, 0, 0.75)
+    rgba(0, 0, 0, 0.85) rgb(0, 0, 0);
+
+  --theme-inverted: #000000;
+  --theme-inverted-transparent: #0000001a;
+}
+
+body,
+.content {
+  background-color: var(--theme-content) !important;
+}
+
+.content {
+  color: var(--theme-inverted);
+}
+
+.spinner {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  display: flex !important;
+  justify-content: center;
+  background: none !important;
+}
+
+.spinner::after {
+  content: "";
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  position: relative;
+  border-color: var(--theme-loading-spinner) !important;
+  border: 10px solid;
+  box-sizing: border-box;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin_restore {
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+button {
+  transition: 0.5s;
+}
+
+.section-content,
+.carousel-item,
+.stack-row,
+.btn-secondary-lg,
+.btn-secondary-md,
+.btn-cta-md,
+.btn-control-md,
+.btn-primary-md,
+.btn-growth-md,
+.rbx-tab,
+.game-stat-container,
+.favorite-follow-vote-share,
+.game-title-container,
+.game-main-content,
+.rbx-tab .rbx-tab-heading,
+#horizontal-tabs,
+.modal-dialog,
+.modal-content,
+.dropdown-menu,
+.dropdown-menu *:not(.new-navbar-search-anchor *):not(.new-navbar-search-anchor), /* Add exemption for searchbar results */
+.tab-content,
+.menu-vertical,
+#chat-main,
+.chat-friend,
+.dialog-container,
+.dialog-main,
+.game-badges-list,
+.badge-row,
+.group-image,
+.group-image *,
+.social-link-icon,
+.popover,
+.copyright-container .language-selector-wrapper .input-group-btn .input-dropdown-btn /* Footer Language Switch */ 
+{
+  border-radius: var(--border-radius) !important;
+}
+
+.popover * {
+  border: none !important;
+}
+
+.popover img {
+  border-radius: var(--lessest-border-radius);
+}
+
+.dropdown-menu * {
+  transition: background-color 0.2s;
+}
+
+.icon-close {
+  background-color: var(--theme-secondary);
+  border-radius: var(--lessest-border-radius);
+}
+
+.modal-header {
+  padding-bottom: 0px !important;
+  border: none !important;
+}
+
+.modal-content,
+.dropdown-menu {
+  padding: 10px;
+}
+
+/* Header & Navigation */
+
+#navigation .rbx-divider {
+  display: none;
+}
+
+#navigation {
+  /* Sidebar */
+  background-color: var(--theme-header);
+  box-shadow: none !important;
+  padding-top: 5px;
+  padding-right: 15px; /* Increase the size of the sidebar */
+  box-sizing: content-box; /* Allow for padding to expand the size */
+}
+
+.dark-theme .rbx-header .rbx-navbar li {
+  transition: 0.4s;
+  border-radius: var(--border-radius);
+}
+
+.dark-theme .rbx-header .rbx-navbar li:hover {
+  background-color: var(--theme-inverted-transparent);
+  border: none !important;
+}
+
+#header {
+  transition: 0.5s background-color;
+  padding: 5px;
+  box-sizing: content-box;
+  border: none !important;
+}
+
+.graphic_theming #header, .graphic_theming .navbar-search ul.dropdown-menu {
+  /* 
+  graphic_theming is a class which will be appiled to body to indicate that graphic intensive effects
+  can be enabled
+  */
+  backdrop-filter: brightness(0.7) blur(32px);
+}
+
+.navbar-search ul.dropdown-menu {
+  margin-top: 16px!important;
+}
+
+.graphic_theming #header.header_has_scrolled {
+  /* header_has_scrolled class is applied using javascript */
+  background-color: var(--theme-header-transparent);
+}
+
+#header:not(.header_has_scrolled), :not(.graphic_theming) #header {
+  background-color: var(--theme-header);
+}
+
+.new-dropdown-menu li {
+  border: none !important;
+}
+
+#navigation ul li:first-child {
+  display: none;
+}
+
+#nav-settings {
+  transition: 0.2s;
+}
+
+#nav-settings:hover {
+  /* Topbar Settings animation */
+  animation: spin 1s linear infinite;
+}
+
+.age-bracket-label-age {
+  /* Age bracket in topbar */
+  display: none;
+}
+
+.navbar-search,
+.navbar-search .input-group * {
+  /* Navigation Serach */
+  border-radius: var(--border-radius) !important;
+}
+
+.graphic_theming .navbar-search .input-group *,
+.graphic_theming .navbar-search, .graphic_theming .navbar-search ul.dropdown-menu {
+  background-color: var(--theme-header-transparent) !important;
+}
+
+.rbx-left-col li {
+  /* Sidebar Buttons */
+  padding: 5px; /* Adding padding for the buttons */
+}
+
+/* Buttons */
+
+.btn-secondary-md, .btn-control-md {
+  /* This kind of button has a outline and a transparent background. */
+  /* Use the secondary theme colour and no border. */
+  border: none !important;
+  background-color: var(--theme-secondary) !important;
+  color: var(--theme-inverted) !important;
+  padding: 15px; /* Add some more padding - Not sure if this will disrupt other buttons. */
+}
+
+.btn-cta-md, .btn-primary-md :not(.carousel-controls), .btn-growth-md {
+  /* This kind of button has a inverted background, with inverted text. */
+  /* Acts as a Confirm/Primary button. */
+  /* Add padding & Border radius only. */
+  padding: 15px;
+}
+
+.btn-common-play-game-lg {
+  /* The play button */
+  background-color: #26a269 !important;
+}
+
+/* Content Adjustment */
+/* Because of the expanded topbar and header, the containers need to be adjusted. */
+
+.container-main {
+  /* Use 45px instead of 40 default, as the topbar has been expanded. */
+  /* Also add a 15px because of the sidebar. */
+  margin: 45px auto 0 15px;
+}
+
+.content {
+  padding-left: 15px; /* Add padding instead of margin for the content class, as it already has a margin. */
+}
+
+/* Fonts */
+
+.builder-font,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+span,
+textarea,
+input,
+#navigation * {
+  font-family: "Poppins", sans-serif !important;
+}
+.text {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 500;
+}
+
+.builder-font h1,
+.builder-font .game-card-container .game-card-name {
+  font-weight: 600 !important;
+}
+.builder-font h2 {
+  font-weight: 500 !important;
+}
+
+.alert {
+  border-radius: 0px 0px var(--border-radius) var(--border-radius);
+}
+
+.alert:not(.on) {
+  top: -60px!important;
+}
+
+div.alert:not(.alert-success) { 
+  background-color: var(--colour-danger) !important;
+}
+
+div.alert-success {
+  background-color: var(--colour-success) !important;
+}
+
+/* Home */
+
+.game-card-container:hover {
+  padding: 5px;
+}
+
+.game-card-container {
+  transition: 0.3s;
+}
+
+/* Chat Window */
+
+#chat-header,
+.dialog-header {
+  border-radius: var(--border-radius) var(--border-radius) 0px 0px;
+  padding: 5px;
+  box-sizing: content-box;
+}
+
+.collapsed #chat-main {
+  box-shadow: none !important;
+  background: transparent !important;
+  margin-bottom: 0px !important;
+}
+
+.collapsed #chat-header {
+  box-shadow: 0px 0px 10px hsla(0, 0%, 0%, 0.74) !important;
+  box-shadow: none !important;
+}
+
+#chat-main {
+  margin: 15px;
+  box-shadow: 0px 0px 10px hsla(0, 0%, 0%, 0.74) !important;
+}
+
+.dialog-container {
+  margin: 15px;
+}
+
+.dialog-container {
+  box-shadow: 0px 0px 10px hsla(0, 0%, 0%, 0.74) !important;
+  background-color: transparent !important;
+}
+
+.chat-search,
+.chat-search-input {
+  border-radius: 0px !important;
+}
+
+.dialog-input-container .dialog-input {
+  background: transparent !important;
+}
+
+.dialog-container .dialog-input-container {
+  background-color: var(--theme-secondary) !important;
+}
+
+.dialog-body {
+  background-color: var(--theme-primary) !important;
+}
+
+.dialog-container .dialog-input-container,
+.dialog-input-container .dialog-input {
+  border-radius: 0px 0px var(--border-radius) var(--border-radius) !important;
+}
+
+#chat-friend-list {
+  max-height: calc(294px - 11px) !important;
+}
+
+/* Settings Page */
+
+.menu-vertical {
+  padding: 10px !important;
+}
+
+.menu-vertical * {
+  border-radius: 5px;
+}
+
+/* Game Page */
+
+.card-item {
+  /* For the server selection */
+  background: var(--theme-transparent);
+  border-radius: var(--border-radius);
+}
+
+:not(.btr-game-main-container)>.game-main-content, /* Make it work well with BTRoblox */
+.tab-content,
+.game-badges-list {
+  padding: 12px !important;
+}
+
+:not(.btr-game-main-container)>.game-main-content, /* Make it work well with BTRoblox */
+.tab-content,
+.game-badges-list {
+  margin-top: 12px;
+}
+
+.game-badges-list {
+  padding: 12px !important;
+}
+
+.nav-tabs,
+.game-main-content,
+.game-badges-list,
+.tab-content,
+.section-content-off,
+:not(.remove-panel) .section-content:not(.remove-panel), /* Home Menu Friends */
+.menu-vertical {
+  background-color: var(--theme-primary) !important;
+}
+
+.dark-theme .rbx-tab .rbx-tab-heading {
+  background-color: var(--theme-primary);
+}
+
+.voting-panel .loading {
+  display: none !important;
+}
+
+.age-rating-details,
+#game-details-play-button-container button {
+  border-radius: var(--lesser-border-radius);
+}
+
+.favorite-follow-vote-share,
+.game-title-container {
+  padding: 15px !important;
+  margin-top: 15px;
+}
+
+.game-title-container {
+  margin: 0px !important;
+}
+
+.game-name {
+  padding: 0px;
+}
+
+.social-media-share {
+  /* Doesnt seem to be used */
+  display: none;
+}
+
+.favorite-follow-vote-share {
+  display: flex;
+  justify-content: center;
+}
+
+.game-stat-container,
+.favorite-follow-vote-share,
+.age-rating-details,
+.game-title-container,
+.badge-row {
+  background-color: var(--theme-transparent) !important;
+  border: none;
+}
+
+.vote-mask {
+  display: none !important;
+}
+
+.vote-percentage {
+  border-radius: 5px;
+}
+
+.avatar-container .avatar-card-image,
+.avatar-container img,
+.avatar-card-image img,
+.avatar-container img,
+.avatar .avatar-card-image {
+  background-color: transparent !important;
+}
+
+.icon-placeholder-avatar-headshot {
+  /* Remove the background placeholder for the friends list*/
+  background-image: none !important;
+}
+
+/* Footer */
+
+.container-footer {
+  background-color: var(--theme-secondary)!important;
+  background: linear-gradient(0deg, var(--theme-secondary) 0%, var(--theme-secondary) 65%, var(--theme-content) 100%)!important; 
+}
+
+/* Group Page */
+.group-cards .rbx-divider {
+  display: none;
+}
+
+.groups-list .group-search-input .input-field {
+  display: inline;
+  /* Disabling float should be fine */
+  float: none !important;
+  border: none !important;
+  border-radius: var(--border-radius);
+  background-color: var(--theme-secondary);
+}
+
+/* Game Lanuching Modal. Only for dark theme */
+.dark-theme.graphic_theming #modal-dialog {
+  background-color: #000;
+  background-size: 85% 105% !important;
+  background-position: 50% 50% !important;
+  background-repeat: no-repeat !important;
+}
+
+.dark-theme.graphic_theming #modal-dialog .icon-logo-r-95 {
+  /* Make the logo smaller */
+  width: 75px;
+  height: 75px;
+  background-size: cover;
+}
+
+.dark-theme.graphic_theming #modal-dialog .close {
+  /* Close Button */
+  z-index: 1000;
+  position: relative;
+}
+
+.dark-theme.graphic_theming #modal-dialog .modal-content {
+  backdrop-filter: blur(20px);
+  background-color: transparent !important;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0) 0%,
+    rgb(0, 0, 0) 80%,
+    rgb(0, 0, 0) 100%
+  );
+}
+
+/* Make a custom download button */
+
+.dark-theme.graphic_theming #modal-dialog .modal-btns #confirm-btn {
+  background: transparent;
+  color: var(--theme-inverted);
+}
+
+/* The help button */
+.dark-theme.graphic_theming #modal-dialog .modal-footer.text-footer a {
+  opacity: 0.2;
+}
+
+.dark-theme.graphic_theming #modal-dialog .modal-header .icon-close {
+  background-color: transparent !important;
+}
