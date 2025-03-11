@@ -162,6 +162,14 @@ button {
   padding: 10px;
 }
 
+.dropdown-menu {
+  background-color: var(--theme-primary)!important;
+}
+
+.dark-theme .stack .card-list .card-item {
+  background-color: var(--theme-transparent);
+}
+
 /* Header & Navigation */
 
 #navigation .rbx-divider {
@@ -205,6 +213,8 @@ button {
 .navbar-search ul.dropdown-menu {
   margin-top: 16px!important;
 }
+
+
 
 .graphic_theming #header.header_has_scrolled {
   /* header_has_scrolled class is applied using javascript */

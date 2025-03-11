@@ -21,7 +21,7 @@ if ((await storage_get("enabled", false)) == false) {
 
   // Detect firefox to use different clean_home scripts
   if (is_firefox) {
-    console.log("Rofrehsed: Running on Firefox")
+    console.log("Rofreshed: Running on Firefox")
     if (clean_home) {
       browser.runtime.sendMessage({ subject: "clean_home_run" });
     } else {
