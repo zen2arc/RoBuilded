@@ -19,10 +19,10 @@ Rofreshed and Robuilded uses Rollup with the [rollup-plugin-chrome-extension](ht
 
 ```shell
 $ git clone https://github.com/PainfulColour/RoFreshed.git
-$ cd RoFreshed
+$ cd RoBuilded
 $ npm ci
 $ npm run build
 ```
 
 ## License
-Rofreshed is licensed under the MIT License. View LICENSE for the full text.
+Robuilded is licensed under the MIT License. View LICENSE for the full text.
