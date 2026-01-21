@@ -14,7 +14,6 @@ RoBuilded is a Manifest V2 extension for Firefox & others (with [webextension-po
 | ![Rofreshed Theme](https://github.com/PainfulColour/RoFreshed/assets/52288545/9844b8e8-e76e-43df-b056-0f6b084fa42f) |
 | Roblox Default: The Roblox default theme. |
 | ![Roblox Default](https://github.com/PainfulColour/RoFreshed/assets/52288545/2d09ff4a-48a6-4348-bab6-7a060d7e2156) |
-RoBuilded Theme just started development so obviously not available until i actually start making it..
 
 ## Build
 Rofreshed and Robuilded uses Rollup with the [rollup-plugin-chrome-extension](https://www.npmjs.com/package/rollup-plugin-chrome-extension) plugin, so ensure that you have [Node.js](https://nodejs.org) and [npm](https://www.npmjs.com/) installed.
@@ -25,6 +24,7 @@ $ cd RoBuilded
 $ npm ci
 $ npm run build
 ```
+by the way, in case you would ever want to build it on a windows machine, please refer to packages.json and replace the rollup dependency from the linux version to amy windows supported one
 
 ## License
 Robuilded is licensed under the MIT License. View LICENSE for the full text.
