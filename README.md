@@ -1,4 +1,4 @@
-# Currently abadoned, development is seized for an unknown period of time
+# i am too lazy to ever make this
 
 # RoBuilded
 RoBuilded is a Manifest V2 extension for Firefox & others (with [webextension-polyfill](https://github.com/mozilla/webextension-polyfill)) to stylize the Roblox Website. Forked from PainfulColour's RoFreshed
