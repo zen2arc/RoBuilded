@@ -1,5 +1,6 @@
-# Rofreshed
-Rofreshed is a Manifest V2 extension for Firefox & others (with [webextension-polyfill](https://github.com/mozilla/webextension-polyfill)) to stylize the Roblox Website. Report any bugs you see & if you have any suggestions, let me know.
+# RoBuilded
+RoBuilded is a Manifest V2 extension for Firefox & others (with [webextension-polyfill](https://github.com/mozilla/webextension-polyfill)) to stylize the Roblox Website. The original owner of it (PainfulColour) has abadoned (archived) RoFreshed, so this repository aims to extend support. Report any bugs you see & if you have any suggestions, let me know.
+
 ## Features
 - Remove buttons on the sidebar
 - Remove clutter (such as "Today's Picks") from the home page
@@ -16,8 +17,8 @@ Rofreshed is a Manifest V2 extension for Firefox & others (with [webextension-po
 Rofreshed uses Rollup with the [rollup-plugin-chrome-extension](https://www.npmjs.com/package/rollup-plugin-chrome-extension) plugin, so ensure that you have [Node.js](https://nodejs.org) and [npm](https://www.npmjs.com/) installed.
 
 ```shell
-$ git clone https://github.com/PainfulColour/RoFreshed.git
-$ cd RoFreshed
+$ git clone https://github.com/zen2arc/RoBuilded.git
+$ cd RoBuilded
 $ npm ci
 $ npm run build
 ```
